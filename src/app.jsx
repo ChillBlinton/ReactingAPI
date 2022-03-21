@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useState } from "react";
 
 const App = () => {
 
@@ -6,14 +7,14 @@ const App = () => {
     const [peep, setPeep] = useState([]);
 
 
-///fetchfilms
+///const fetchfilms, https://ghibliapi.herokuapp.com/films
     const getFilms = async () => {
         const res = await fetch('https://ghibliapi.herokuapp.com/films')
         const data = await res.json()
         setFilms(data);
     }
    
-//peeps
+//peeps...  https://ghibliapi.herokuapp.com/people
     const getPeep = async () => {
         const res = await fetch('https://ghibliapi.herokuapp.com/people')
         const data = await res.json()
@@ -25,14 +26,15 @@ const App = () => {
 
     const Films = films.map(val => {
         return<>
-            <div classname="col-md-3">
+            <div>
+        
 
 
             </div>
         </>
     }
-        )
-
+    )
+//bs cards info here
 
 
     //Create buttons
